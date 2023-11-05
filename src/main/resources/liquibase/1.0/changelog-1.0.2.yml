@@ -1,0 +1,26 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create books table
+      author: Rashad Suleymanov
+      changes:
+        - createTable:
+            tableName: books
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: text
+                  constraints:
+                    nullable: false
+
+            remarks: Table to store info about books
+
+
+
+

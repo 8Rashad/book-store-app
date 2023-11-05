@@ -1,0 +1,32 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create authors table
+      author: Rashad Suleymanov
+      changes:
+        - createTable:
+            tableName: authors
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: text
+                  constraints:
+                    nullable: false
+              - column:
+                  name: age
+                  type: int
+                  remarks: age of author
+                  constraints:
+                    nullable: false
+
+            remarks: Table to store info about authors
+
+
+
+
